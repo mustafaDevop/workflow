@@ -32,14 +32,19 @@ welcome:
                         # Run the welcome/run job in its own container
 
 jobs:
-      - welcome/run
+     
+     - welcome/run
+
 Add a jobs section between the orbs and workflows sections.
 
 Add two jobs named something like print_hello and print_world.
 
 Both jobs should use the Docker executor and a lightweight image like circleci/node:13.8.0.
+
 Both jobs should have a steps section that runs a simple bash command.
+
 To run a bash command, add a run line followed by your bash instructions. We'd like to print (echo) "hello" in one job and "world" in the other.
+
 Add your job names to the workflows section so that they run in sequence.
 
 Use the "requires" key to make your print_world job wait for the print_hello job to finish.
